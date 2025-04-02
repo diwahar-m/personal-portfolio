@@ -3,6 +3,7 @@ import menubarOpen from "../assets/navbar/menubarOpen.svg";
 import menubarClose from "../assets/navbar/menubarClose.svg";
 import { useState } from "react";
 import { Box, Drawer, List, ListItem } from "@mui/material";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const navbarLinks = ["home", "works", "about-me", "contacts"];
 
@@ -14,7 +15,19 @@ const Navbar = () => {
   };
 
   return (
-    <div className="mx-auto mt-[1.4rem] flex justify-between items-center">
+    <div className="mx-auto sm:mx-[8rem] mt-[1.4rem] flex justify-between items-center ">
+      {/* Social Media Links */}
+
+      <div className="hidden sm:flex absolute top-0 left-[2rem]  flex-col justify-between  gap-[0.9rem] w-[3.125rem]">
+        <div className="mx-auto">
+          <div className="border-l-[2px] border-[#ABB2BF] h-[11.9rem]"></div>
+        </div>
+        <div className="flex flex-col gap-1 justify-between items-center w-[100%]">
+          <FaGithub size={25} color={"#ABB2BF"} />
+          <FaLinkedin size={25} color={"#ABB2BF"} />
+        </div>
+      </div>
+
       {/* Logo */}
       <div className=" flex gap-[0.5rem] iem-center">
         <img src={Logo} alt="logo" className="w-[1rem] h-[1rem]" />
@@ -30,7 +43,6 @@ const Navbar = () => {
         ))}
       </div>
       {/* Mobile - Navbar Links */}
-      {/* <Button>Open drawer</Button> */}
       <button
         className="sm:hidden"
         onClick={open ? toggleDrawer(false) : toggleDrawer(true)}
@@ -71,6 +83,20 @@ const Navbar = () => {
                 </a>
               </ListItem>
             ))}
+
+            <Box
+              sx={{
+                marginTop: "30px",
+                marginX: "auto",
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+                width: "30%",
+              }}
+            >
+              <FaGithub size={30} color={"#ABB2BF"} />
+              <FaLinkedin size={30} color={"#ABB2BF"} />
+            </Box>
           </List>
         </Box>
       </Drawer>
