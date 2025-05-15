@@ -1,6 +1,7 @@
 import { Divider } from "@mui/material";
 import { ArrowRight } from "lucide-react";
 import React from "react";
+import ProjectCard from "./ProjectCard";
 
 export default function Projects() {
   return (
@@ -17,6 +18,7 @@ export default function Projects() {
           <ArrowRight size={"20"} color="#fff" />
         </div>
       </div>
+      <ProjectCard />
     </div>
   );
 }
