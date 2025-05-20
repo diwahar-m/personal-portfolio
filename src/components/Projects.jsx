@@ -5,7 +5,7 @@ import ProjectCard from "./ProjectCard";
 
 export default function Projects() {
   return (
-    <div className="sm:mx-[8rem]  ">
+    <div className="sm:mx-[8rem]   ">
       <div className="flex justify-between items-center">
         <div className="flex gap-3 items-center">
           <h3 className="font-semibold text-[#fff] text-[2rem]">
@@ -18,7 +18,11 @@ export default function Projects() {
           <ArrowRight size={"20"} color="#fff" />
         </div>
       </div>
-      <ProjectCard />
+      <div className="flex justify-between gap-2">
+        <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
+      </div>
     </div>
   );
 }
