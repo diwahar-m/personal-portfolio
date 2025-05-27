@@ -12,7 +12,7 @@ export default function ProjectCard() {
       </div>
       <div className="p-2 flex flex-col gap-1">
         <h2 className="text-[#fff]">ProtectX</h2>
-        <p>Discod anti-crash bot</p>
+        <p className="text-[#ABB2BF]">Discod anti-crash bot</p>
         <button className="border-[#C778DD] hover:border-[#fff] w-[50%] border-[0.1rem] py-[0.5rem] px-[1rem] text-[#fff] hover:text-[#C778DD]">
           Live
         </button>
